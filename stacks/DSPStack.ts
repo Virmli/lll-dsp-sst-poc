@@ -17,15 +17,15 @@ export default class DSPStack extends Stack {
     //   authorizerArn: AUTHORIZER_LAMBDA_ARN,
     // })
 
-    const checkHandler = new Function(this, 'check', {
-      handler: 'src/handlers/api/check.handler',
+    const getStores = new Function(this, 'getStores', {
+      handler: 'src/handlers/api/getStores.handler',
     })
 
     const api = new ApiGatewayV1Api(this, 'api', {
       // customDomain: customDomainForStage(scope.stage),
       routes: {
         'GET /stores': {
-          function: checkHandler,
+          function: getStores,
         },
       },
     })

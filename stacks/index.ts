@@ -16,7 +16,7 @@ export default function main(app: App): void {
   // Set default runtime for all functions
   app.setDefaultFunctionProps({
     runtime: 'python3.9',
-    tracing: 'active', //Tracing.ACTIVE,
+    tracing: 'active',//Tracing.ACTIVE,
     functionName: ({ functionProps }): string => {
       if (!functionProps.handler) {
         throw new Error('SST Function handler path is undefined')
