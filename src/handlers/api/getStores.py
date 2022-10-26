@@ -8,7 +8,7 @@ def main(event, context):
         "body": json.dumps([{
             "data": {
                 "attributes": {
-                    "address1": "114 Fifth Avenue",
+                    "address1": "115 Fifth Avenue",
                     "address2": None,
                     "address_for_google": "114 5th Ave, NYC. 10011 New York United States",
                     "all_events_url": "https://www.eventbrite.ca/o/lululemon-flatiron-9596896295",

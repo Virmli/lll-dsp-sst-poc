@@ -1,6 +1,5 @@
 import { App, Stack, StackProps, ApiGatewayV1Api, Function } from '@serverless-stack/resources'
 
-
 // import { customDomainForStage } from './utils'
 // import { Effect, PolicyStatement } from 'aws-cdk-lib/aws-iam'
 // import * as env from 'env-var'
@@ -18,7 +17,7 @@ export default class DSPStack extends Stack {
     // })
 
     const getStores = new Function(this, 'getStores', {
-      handler: 'src/handlers/api/getStores.handler',
+      handler: 'handlers/api/getStores.main',
     })
 
     const api = new ApiGatewayV1Api(this, 'api', {
@@ -32,8 +31,8 @@ export default class DSPStack extends Stack {
 
     // new LogStream(this, 'log-stream')
     // new DSPDashboard(this, api, {
-    //   name: 'denali-alert',
-    //   arn: DENALI_ALERTS_ARN,
+    //   name: 'dsp-alert',
+    //   arn: DSP_ALERTS_ARN,
     // })
 
     this.addOutputs({

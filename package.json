@@ -4,11 +4,13 @@
   "version": "1.0.0",
   "contributors": [],
   "scripts": {
-    "test": "jest --passWithNoTests --coverage",
-    "build": "rm -rf build && tsc -p ./tsconfig.build.json",
+    "start": "sst start",
+    "deploy": "sst deploy",
+    "build": "sst build",
+    "remove": "sst remove",
+    "update": "sst update",
     "lint": "eslint -c .eslintrc.json --ext .ts ./src --fix",
-    "type-check": "tsc -p ./tsconfig.json --skipLibCheck",
-    "prepublishOnly": "rm -rf build && npm run build"
+    "type-check": "tsc -p ./tsconfig.json --skipLibCheck"
   },
   "bin": {
     "open-guard-typescript": "build/cli.js"

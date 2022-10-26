@@ -1,5 +1,5 @@
 {
-  "name": "emailage",
-  "region": "us-east-2",
+  "name": "lll-dsp-sst-poc",
+  "region": "us-east-1",
   "main": "stacks/index.ts"
 }
